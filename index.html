@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azyron Tech - Software IT Company</title>
+
+     <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="Logo.png">
+  <link rel="icon" type="image/x-icon" href="Logo.png">
+    
+    <!-- SEO Optimization: Meta Tags -->
+    <meta name="description" content="We Build Digital Solutions That Scale. Expert web development, app development, SEO, and branding services for businesses.">
+    <meta name="keywords" content="software development, web development, app development, SEO, digital marketing, IT solutions">
+    <meta name="author" content="Azyron Tech">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "TechSolutions",
+        "url": "https://techtuition.co",
+        "logo": "https://via.placeholder.com/150",
+        "description": "Leading software IT company providing scalable digital solutions."
+    }
+    </script>
+    
+    <!-- Tailwind CSS for Modern Design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS for Additional Styling -->
+    <style>
+        /* Custom animations and styles for unique UI */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover:hover { transform: scale(1.05); transition: transform 0.3s; }
+        .btn-primary { background: linear-gradient(45deg, #28a745, #20c997); }
+        .chatbot { position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; background: #25D366; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        .testimonials-slider { overflow: hidden; }
+        .testimonial-item { display: none; }
+        .testimonial-item.active { display: block; }
+    </style>
+    
+    <!-- Analytics: Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');  // Replace with your actual GA ID
+    </script>
+</head>
+
+<body class="bg-white text-gray-900 font-sans">
+    <!-- Multi-Language Support Toggle (Basic JS for EN/HI) -->
+    <div id="nav-bar" class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-blue-600">Azyron Tech</div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition">About Us</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 transition">Services</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-blue-600 transition">Pricing</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600 transition">Portfolio</a>
+                    <a href="#blog" class="text-gray-700 hover:text-blue-600 transition">Blog</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                    <a href="#careers" class="text-gray-700 hover:text-blue-600 transition">Careers</a>
+                </nav>
+                <button id="lang-toggle" class="bg-gray-200 px-4 py-2 rounded">EN</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 1: Homepage Hero Section -->
+    <section id="home" class="relative py-20 md:py-32 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center fade-in">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6" id="hero-title">We Build Digital Solutions That Scale</h1>
+                <p class="text-lg mb-8 text-gray-600">Empower your business with cutting-edge technology. From websites to apps, SEO to branding – we're your one-stop partner.</p>
+                <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex">
+                    <button class="btn-primary text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition" onclick="openChatbot()">Get a Quote</button>
+                    <a href="#services" class="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition">View Services</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 mt-10 md:mt-0">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/de940d4d-b57e-4085-95ed-d60a1778e260.png" alt="Detailed vector illustration of a modern laptop displaying dynamic code with futuristic digital network connections, glowing blue and purple screens, professional Coding environment in a sleek office setting with warm ambient lighting and subtle tech accessories like a smartphone and headset" class="rounded-lg shadow-lg" onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/63b42175-6288-4d10-a24d-9358c653f372.png'">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Our Services Overview -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1faf838d-c3b0-41c2-8ee8-21cda8cd6b26.png" alt="Vibrant illustration of a responsive website layout on multiple devices including desktop computer, tablet, and mobile phone, with coding icons and browser windows showing clean UI design" />
+                    <h3 class="text-xl font-semibold mt-4">Web Development</h3>
+                    <p class="text-gray-600">Custom websites, WordPress, E-commerce solutions.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/df9d3a95-9ea9-4fb4-a543-1f122044b7ad.png" alt="High-tech mobile app interface mockup displayed on smartphone screens, showing app icons, navigation menus, and interactive elements in bright turquoise and teal colors" />
+                    <h3 class="text-xl font-semibold mt-4">Mobile App Development</h3>
+                    <p class="text-gray-600">iOS, Android, Cross-platform apps.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3a9d7264-0219-4cf3-9412-272b7a9566de.png" alt="Colorful digital marketing dashboard with graphs, social media icons, search engine optimization symbols, and advertising banners in a mix of blues and greens" />
+                    <h3 class="text-xl font-semibold mt-4">Digital Marketing & SEO</h3>
+                    <p class="text-gray-600">SEO, SMM, PPC, Content marketing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-choose" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-12">Why Choose Us - Your Success is Our Priority</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="p-6">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a650b66b-4753-4b18-bba4-3152b05b3ba8.png" alt="Collaborative team icon representing experienced professionals working together for success" />
+                    <h3 class="text-xl font-semibold mt-4">Expert Team</h3>
+                </div>
+                <div class="p-6">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/14b93163-2dcf-4e24-bf7e-3cd9b30cfbbc.png" alt="End-to-end process diagram from ideation to delivery, highlighting complete solutions" />
+                    <h3 class="text-xl font-semibold mt-4">End-to-End Solutions</h3>
+                </div>
+                <div class="p-6">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3ed977f9-a6f9-4226-874b-ac1be61468df.png" alt="Affordable pricing depiction with cost-saving elements and value for money symbols" />
+                    <h3 class="text-xl font-semibold mt-4">Affordable & Reliable</h3>
+                </div>
+                <div class="p-6">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/54aabe23-3490-4b34-ad60-ae3e446a9cca.png" alt="24x7 support dashboard with chat, phone, and emergency icons representing constant availability" />
+                    <h3 class="text-xl font-semibold mt-4">24/7 Support</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 4: Portfolio Snapshot -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Portfolio Snapshot</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7db120bd-e16a-43b6-a987-cdee36962dae.png" alt="Screenshot of a modern e-commerce website with product listings, shopping cart, and checkout page in a sleek blue theme" />
+                    <h3 class="text-xl font-semibold mt-4">E-commerce Site for Fashion Brand</h3>
+                    <p class="text-gray-600">Increased sales by 40% with custom WooCommerce integration.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9741088e-b22c-47c1-a12f-d0575af4ef36.png" alt="Mobile app interface for health and fitness tracking, showing dashboards, user profiles, and activity graphs" />
+                    <h3 class="text-xl font-semibold mt-4">Fitness App for iOS/Android</h3>
+                    <p class="text-gray-600">Launched with 10k+ downloads in first month.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Testimonials & Reviews</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-item active">
+                    <p class="text-lg italic text-center">"TechSolutions transformed our online presence. Highly recommend!"</p>
+                    <p class="text-center mt-4 font-semibold">- John Doe, CEO of Startup Inc.</p>
+                </div>
+                <div class="testimonial-item">
+                    <p class="text-lg italic text-center">"Excellent service and support. Our app is a hit!"</p>
+                    <p class="text-center mt-4 font-semibold">- Jane Smith, Founder of HealthApp</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: CTA Banner -->
+    <section class="py-16 gradient-bg text-center text-white">
+        <h2 class="text-3xl font-bold mb-4">Let’s Build Your Project Today!</h2>
+        <button class="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition">Get Started</button>
+    </section>
+
+   <!-- Meet Our Expert Team -->
+    <section id="team" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-12">Meet Our Expert Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1ba5282d-dc77-470d-a1bf-465cd01cb758.png" alt="Professional portrait of CEO in a sleek office setting with modern tech background emphasizing leadership" class="mx-auto rounded-full w-32 h-32" onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ddea1ab7-8114-49b2-aab0-ae7186a711a0.png';">
+                    <h3 class="text-xl font-semibold mt-4">John Doe - CEO</h3>
+                    <p class="text-gray-600">Visionary leader with 15+ years in tech innovation.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e3ea3227-96fc-4e03-a441-b771016d2488.png" alt="CTO smiling confidently with coding books and a laptop, reflecting expertise in software architecture" class="mx-auto rounded-full w-32 h-32" onerror="this.src='https://placehold.co/150x150/e0e0e0/434343';">
+                    <h3 class="text-xl font-semibold mt-4">Jane Smith - CTO</h3>
+                    <p class="text-gray-600">Expert in scalable backend systems and app dev.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/92f286b5-8116-4acc-9057-d3c43a07f26f.png" alt="Marketing Head posing with creative tools like a tablet and idea bulb, showcasing digital marketing prowess" class="mx-auto rounded-full w-32 h-32" onerror="this.src='https://placehold.co/150x150/e0e0e0/434343';">
+                    <h3 class="text-xl font-semibold mt-4">Alex Brown - Marketing Lead</h3>
+                    <p class="text-gray-600">Drives growth through SEO and digital strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Certifications and Awards -->
+    <section id="certifications" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-12">Our Certifications & Awards</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/270273ae-5a30-4df4-acec-37f43e73d3cb.png" alt="Gold star award icon with MSME certification badge, indicating micro, small and medium enterprises registration for business credibility" />
+                    <h3 class="text-xl font-semibold">MSME Certified</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9e8069b0-d9f0-4823-83fc-266d8b377802.png" alt="ISO 9001 quality standard badge with checkmarks, showing compliance in quality management systems" />
+                    <h3 class="text-xl font-semibold">ISO 9001 Certified</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/011d5c69-dcfd-4588-8f1b-bf0c59792564.png" alt="Trophy with 'Best Startup 2023' inscription, highlighting awards received in innovation and business excellence" />
+                    <h3 class="text-xl font-semibold">Best Startup Award 2023</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 8: Services Page Details -->
+<section id="services" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center mb-12">Our Detailed Services</h2>
+    
+    <!-- Responsive Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Website Development -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold">Website Development</h3>
+        <p class="mt-2">
+          Custom & WordPress – Modern, responsive, and high-performing websites tailored to your business.
+        </p>
+        <button class="bg-blue-700 hover:bg-blue-600 text-white px-4 py-2 rounded mt-4" onclick="openChatbot()">Get Started</button>
+      </div>
+
+      <!-- App Development -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold">App Development</h3>
+        <p class="mt-2">
+          User-friendly and scalable mobile applications for iOS & Android.
+        </p>
+        <button class="bg-blue-700 hover:bg-blue-600 text-white px-4 py-2 rounded mt-4" onclick="openChatbot()">Get Started</button>
+      </div>
+
+      <!-- Digital Marketing & SEO -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold">Digital Marketing & SEO</h3>
+        <p class="mt-2">
+          Strategies to enhance online visibility and drive organic growth.
+        </p>
+        <button class="bg-blue-700 hover:bg-blue-600 text-white px-4 py-2 rounded mt-4" onclick="openChatbot()">Get Started</button>
+      </div>
+
+      <!-- Logo Design & Branding -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold">Logo Design & Branding</h3>
+        <p class="mt-2">
+          Creative brand identities that leave a lasting impression.
+        </p>
+        <button class="bg-blue-700 hover:bg-blue-600 text-white px-4 py-2 rounded mt-4" onclick="openChatbot()">Get Started</button>
+      </div>
+
+      <!-- Interior & Home Décor Design -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold">Interior & Home Décor Design</h3>
+        <p class="mt-2">
+          Stylish, functional, and personalized space designs.
+        </p>
+        <button class="bg-blue-700 hover:bg-blue-600 text-white px-4 py-2 rounded mt-4" onclick="openChatbot()">Get Started</button>
+      </div>
+
+      <!-- Website Maintenance & Support -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold">Website Maintenance & Support</h3>
+        <p class="mt-2">
+          Continuous updates, security, and performance optimization.
+        </p>
+        <button class="bg-blue-700 hover:bg-blue-600 text-white px-4 py-2 rounded mt-4" onclick="openChatbot()">Get Started</button>
+      </div>
+
+      <!-- Testing & Quality Assurance -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold">Testing & Quality Assurance</h3>
+        <p class="mt-2">
+          Bug-free and reliable solutions through rigorous testing.
+        </p>
+        <button class="bg-blue-700 hover:bg-blue-600 text-white px-4 py-2 rounded mt-4" onclick="openChatbot()">Get Started</button>
+      </div>
+
+      <!-- PPT & Resume Writing -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold">PPT & Resume Writing</h3>
+        <p class="mt-2">
+          Professionally designed presentations and resumes for impact.
+        </p>
+        <button class="bg-blue-700 hover:bg-blue-600 text-white px-4 py-2 rounded mt-4" onclick="openChatbot()">Get Started</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Pricing -->
+  <section id="pricing" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h3 class="text-3xl font-bold text-center mb-10">Pricing & Packages</h3>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-semibold mb-4">Starter Plan</h4>
+          <p class="text-3xl font-bold text-blue-600 mb-4">₹10,000</p>
+          <p>Small Business Website</p>
+          <ul class="mt-4">
+            <li>Up to 5 pages</li>
+            <li>Basic SEO</li>
+          </ul>
+          <button class="mt-6 bg-blue-600 text-white px-4 py-2 rounded">Choose Plan</button>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-semibold mb-4">Growth Plan</h4>
+          <p class="text-3xl font-bold text-blue-600 mb-4">₹15,000/mo</p>
+          <p>Web + SEO + Social</p>
+          <ul class="mt-4">
+            <li>Website</li>
+            <li>SEO optimizations</li>
+          </ul>
+          <button class="mt-6 bg-blue-600 text-white px-4 py-2 rounded">Choose Plan</button>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-semibold mb-4">Premium Plan</h4>
+          <p class="text-3xl font-bold text-blue-600 mb-4">₹30,000/mo</p>
+          <p>Full Digital Presence</p>
+          <ul class="mt-4">
+            <li>Web + App</li>
+            <li>Marketing strategy</li>
+          </ul>
+          <button class="mt-6 bg-blue-600 text-white px-4 py-2 rounded">Choose Plan</button>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-semibold mb-4">Custom Plan</h4>
+          <p class="text-3xl font-bold text-blue-600 mb-4">Custom</p>
+          <p>Enterprise Solutions</p>
+          <ul class="mt-4">
+            <li>Tailored services</li>
+            <li>Dedicated support</li>
+          </ul>
+          <button class="mt-6 bg-blue-600 text-white px-4 py-2 rounded">Contact Us</button>
+        </div>
+      </div>
+      <p class="text-center mt-10">Payments via Razorpay/Stripe -
+
+ Supports UPI, Cards, Subscriptions</p>
+    </div>
+  </section>
+
+    <!-- Section 10: Full Portfolio -->
+    <section id="portfolio" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Portfolio / Case Studies</h2>
+            <div class="space-y-8">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0b4764a3-213e-4aac-805e-416df9d5c073.png" alt="Detailed case study layout showing e-commerce site development with before and after screenshots, icons for increased traffic and sales" />
+                    <h3 class="text-xl font-semibold">E-commerce Redesign</h3>
+                    <p><strong>Problem:</strong> Low conversions. <strong>Solution:</strong> Custom React site. <strong>Result:</strong> 40% increase in sales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog -->
+  <section id="blog" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h3 class="text-3xl font-bold text-center mb-10">Blog / Insights</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <article class="bg-gray-50 p-6 rounded-lg">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7c3d6e94-139f-435a-a5fc-6b8cae5e649a.png" alt="Technology trends chart with rising graphs and futuristic elements" class="mb-4 rounded">
+          <h4>Latest in Tech Trends 2024</h4>
+          <p>Exploring AI, cloud computing, and more...</p>
+        </article>
+        <article class="bg-gray-50 p-6 rounded-lg">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9a4a64cc-b4c0-44e6-8961-c7fcfcb77aa5.png" alt="Marketing strategies infographic with social media and ad campaign visuals" class="mb-4 rounded">
+          <h4>Digital Marketing Best Practices</h4>
+          <p>Tips for SEO and PPC...</p>
+        </article>
+        <article class="bg-gray-50 p-6 rounded-lg">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/48a016f9-5bdf-496e-8687-97b535d7a588.png" alt="Startup guide with steps from idea to growth" class="mb-4 rounded">
+          <h4>Guide to Starting a Startup</h4>
+          <p>Essential steps and advice...</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Live Project Inquiry Contact -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12">Live Project Inquiry - Contact Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <form id="inquiry-form" class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <input type="text" name="name" placeholder="Name" class="w-full p-3 mb-4 border rounded" required>
+                    <input type="email" name="email" placeholder="Email" class="w-full p-3 mb-4 border rounded" required>
+                    <select name="service" class="w-full p-3 mb-4 border rounded">
+                        <option>Select Service</option>
+                        <option>Web Dev</option>
+                        <option>App Dev</option>
+                        <option>SEO</option>
+                    </select>
+                    <textarea name="message" placeholder="Message" class="w-full p-3 mb-4 border rounded" required></textarea>
+                    <input type="file" name="file" class="w-full p-3 mb-4 border rounded" accept=".pdf,.doc,.jpg">
+                    <button type="submit" class="btn-primary text-white px-6 py-3 rounded-lg w-full">Submit Inquiry</button>
+                </form>
+                <div>
+                    <p class="text-lg">Email: contact@techtuition.co | Phone: +91-9876543210</p>
+                    <p class="mt-4">Address: Mumbai, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 13: Careers -->
+    <section id="careers" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Careers</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold">Frontend Developer</h3>
+                    <p>Experience required: 2+ years. <a href="#" class="text-blue-600">Apply Now</a></p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold">Internship Program</h3>
+                    <p>For freshers. <a href="#" class="text-blue-600">Apply Now</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Combined Footer -->
+<footer class="bg-blue-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <nav class="flex flex-col space-y-2">
+          <a href="#home" class="hover:text-gray-300">Home</a>
+          <a href="#services" class="hover:text-gray-300">Services</a>
+          <a href="#portfolio" class="hover:text-gray-300">Portfolio</a>
+          <a href="#blog" class="hover:text-gray-300">Blog</a>
+          <a href="#contact" class="hover:text-gray-300">Contact</a>
+        </nav>
+      </div>
+
+      <!-- Social Media -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+        <div class="flex space-x-4">
+          <a href="#" class="hover:text-gray-300">LinkedIn</a>
+          <a href="#" class="hover:text-gray-300">Instagram</a>
+          <a href="#" class="hover:text-gray-300">Twitter</a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Newsletter</h4>
+        <form class="flex flex-col">
+          <input 
+            type="email" 
+            placeholder="Enter your email" 
+            class="p-2 rounded text-black"
+          >
+          <button 
+            type="submit" 
+            class="bg-blue-700 hover:bg-blue-600 text-white px-4 py-2 mt-2 rounded"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+
+      <!-- Location Map -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Our Location</h4>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.1234567890123!2d72.8777!3d19.076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c63c0a1a1a1a%3A0x123456789abcdef!2sMumbai%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Office Location"
+          class="w-full h-40 rounded"
+        ></iframe>
+      </div>
+
+    </div>
+
+    <!-- Bottom Footer -->
+    <p class="text-center mt-12 border-t border-gray-700 pt-6">
+      © 2023 Azyron Tech. All Rights Reserved. | <a href="#" class="hover:text-gray-300">Privacy Policy</a>
+    </p>
+  </div>
+</footer>
+
+    <!-- WhatsApp Integration -->
+    <a href="https://wa.me/9151668468" class="fixed bottom-20 right-5 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition shadow">WhatsApp Chat</a>
+
+    <!-- AI Chatbot Simulation -->
+    <div id="chatbot" class="chatbot hidden">
+        <div class="bg-white p-4 rounded-lg shadow-lg">
+            <p>Hello! How can we help?</p>
+            <input type="text" class="border p-2 rounded w-full mt-2">
+            <button id="chat-send" class="btn-primary text-white px-4 py-2 mt-2 rounded">Send</button>
+        </div>
+    </div>
+
+    <!-- JavaScript for Features -->
+    <script>
+        // Language Toggle
+        const langToggle = document.getElementById('lang-toggle');
+        langToggle.addEventListener('click', () => {
+            if (langToggle.textContent === 'EN') {
+                langToggle.textContent = 'HI';
+                document.getElementById('hero-title').textContent = 'हम स्केलेबल डिजिटल समाधान बनाते हैं';
+            } else {
+                langToggle.textContent = 'EN';
+                document.getElementById('hero-title').textContent = 'We Build Digital Solutions That Scale';
+            }
+        });
+
+        // Payment Simulation (Link to Razorpay for Real Integration)
+        function initiatePayment(amount) {
+            alert(`Redirecting to payment of ₹${amount}. Integrate Razorpay API here.`);
+            // Example: window.location.href = 'https://razorpay.com/payment-link'; // Real link
+        }
+
+        // AI Chatbot Toggle
+        function openChatbot() {
+            const chatbot = document.getElementById('chatbot');
+            chatbot.classList.toggle('hidden');
+        }
+        document.getElementById('chat-send').addEventListener('click', () => {
+            alert('Chat message sent! (Integrate API for full chatbot)');
+        });
+
+        // Form Submission
+        document.getElementById('inquiry-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Inquiry submitted! We will get back to you.');
+        });
+
+        // Testimonials Slider
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial-item');
+        setInterval(() => {
+            testimonials[currentTestimonial].classList.remove('active');
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            testimonials[currentTestimonial].classList.add('active');
+        }, 5000);
+    </script>
+</body>
+
+</html>
+</content>
+</create_file>
